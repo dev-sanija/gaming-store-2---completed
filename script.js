@@ -20,12 +20,12 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 /* =========================
-   SHAWDY - CONSTANTS
+   MADUWA - CONSTANTS
 ========================= */
 const ADMIN_1 = "94719270005"; // Replace with the actual admin 1 number
 const ADMIN_2 = "94000000000"; // Replace with the actual admin 2 number
-const OPEN_TIME = 990;   // 4:30 PM, Colombo time
-const CLOSE_TIME = 1350; // 10:30 PM, Colombo time
+const OPEN_TIME = 420;   // 4:30 PM, Colombo time
+const CLOSE_TIME = 1380; // 10:30 PM, Colombo time
 const STORE_NAME = "MADUWA STORE";
 
 const topupProducts = [
@@ -33,33 +33,33 @@ const topupProducts = [
     // DIAMONDS
     // =========================
     { id: "diamond-25", category: "diamond", name: "Diamond × 25", price: 100, image: "ASSETS/Top-Up/Diamonds/diamond-25.webp" },
-    { id: "diamond-100", category: "diamond", name: "Diamond × 100", price: 330, image: "ASSETS/Top-Up/Diamonds/diamond-100.webp" },
-    { id: "diamond-310", category: "diamond", name: "Diamond × 310", price: 1000, image: "ASSETS/Top-Up/Diamonds/diamond-310.webp" },
-    { id: "diamond-520", category: "diamond", name: "Diamond × 520", price: 1680, image: "ASSETS/Top-Up/Diamonds/diamond-520.webp" },
-    { id: "diamond-1060", category: "diamond", name: "Diamond × 1060", price: 3300, image: "ASSETS/Top-Up/Diamonds/diamond-1060.webp" },
-    { id: "diamond-2180", category: "diamond", name: "Diamond × 2180", price: 6600, image: "ASSETS/Top-Up/Diamonds/diamond-2180.webp" },
-    { id: "diamond-5600", category: "diamond", name: "Diamond × 5600", price: 16300, image: "ASSETS/Top-Up/Diamonds/diamond-5600.webp" },
-    { id: "diamond-11500", category: "diamond", name: "Diamond × 11500", price: 33000, image: "ASSETS/Top-Up/Diamonds/diamond-11500.webp" },
+    { id: "diamond-100", category: "diamond", name: "Diamond × 100", price: 360, image: "ASSETS/Top-Up/Diamonds/diamond-100.webp" },
+    { id: "diamond-310", category: "diamond", name: "Diamond × 310", price: 1100, image: "ASSETS/Top-Up/Diamonds/diamond-310.webp" },
+    { id: "diamond-520", category: "diamond", name: "Diamond × 520", price: 1700, image: "ASSETS/Top-Up/Diamonds/diamond-520.webp" },
+    { id: "diamond-1060", category: "diamond", name: "Diamond × 1060", price: 3550, image: "ASSETS/Top-Up/Diamonds/diamond-1060.webp" },
+    { id: "diamond-2180", category: "diamond", name: "Diamond × 2180", price: 6800, image: "ASSETS/Top-Up/Diamonds/diamond-2180.webp" },
+    { id: "diamond-5600", category: "diamond", name: "Diamond × 5600", price: 17000, image: "ASSETS/Top-Up/Diamonds/diamond-5600.webp" },
+    { id: "diamond-11500", category: "diamond", name: "Diamond × 11500", price: 34500, image: "ASSETS/Top-Up/Diamonds/diamond-11500.webp" },
 
     // =========================
     // MEMBERSHIP
     // =========================
     { id: "weekly-lite", category: "membership", name: "WEEKLY LITE", price: 130, image: "ASSETS/Top-Up/Memberships/weekly-lite.webp" },
-    { id: "weekly", category: "membership", name: "Weekly", price: 560, image: "ASSETS/Top-Up/Memberships/weekly.webp" },
-    { id: "monthly", category: "membership", name: "Monthly", price: 2800, image: "ASSETS/Top-Up/Memberships/monthly.webp" },
+    { id: "weekly", category: "membership", name: "Weekly", price: 580, image: "ASSETS/Top-Up/Memberships/weekly.webp" },
+    { id: "monthly", category: "membership", name: "Monthly", price: 2850, image: "ASSETS/Top-Up/Memberships/monthly.webp" },
 
     // =========================
     // MEMBERSHIP PACKS
     // =========================
-    { id: "little-pack", category: "membership-pack", name: "Little Pack", price: 1370, image: "ASSETS/Top-Up/Membership-Packs/little-pack.webp" },
-    { id: "vip-pack", category: "membership-pack", name: "VIP PACK", price: 3340, image: "ASSETS/Top-Up/Membership-Packs/vip-pack.webp" },
-    { id: "vip-special", category: "membership-pack", name: "VIP SPECIAL", price: 3460, image: "ASSETS/Top-Up/Membership-Packs/vip-special.webp" },
-    { id: "big-pack", category: "membership-pack", name: "BIG PACK", price: 5020, image: "ASSETS/Top-Up/Membership-Packs/big-pack.webp" },
-    { id: "super-vip", category: "membership-pack", name: "SUPER VIP", price: 6700, image: "ASSETS/Top-Up/Membership-Packs/super-vip.webp" },
-    { id: "diamond-3000-pack", category: "membership-pack", name: "Diamond × 3000", price: 8380, image: "ASSETS/Top-Up/Membership-Packs/diamond-3000.webp" },
-    { id: "diamond-5000-pack", category: "membership-pack", name: "Diamond × 5000", price: 13960, image: "ASSETS/Top-Up/Membership-Packs/diamond-5000.webp" },
-    { id: "diamond-8000-pack", category: "membership-pack", name: "Diamond × 8000", price: 22360, image: "ASSETS/Top-Up/Membership-Packs/diamond-8000.webp" },
-    { id: "diamond-10000-pack", category: "membership-pack", name: "Diamond × 10000", price: 27960, image: "ASSETS/Top-Up/Membership-Packs/diamond-10000.webp" }
+    { id: "little-pack", category: "membership-pack", name: "Little Pack", price: 1600, image: "ASSETS/Top-Up/Membership-Packs/little-pack.webp" },
+    { id: "vip-pack", category: "membership-pack", name: "VIP PACK", price: 3450, image: "ASSETS/Top-Up/Membership-Packs/vip-pack.webp" },
+    { id: "vip-special", category: "membership-pack", name: "VIP SPECIAL", price: 3560, image: "ASSETS/Top-Up/Membership-Packs/vip-special.webp" },
+    { id: "big-pack", category: "membership-pack", name: "BIG PACK", price: 5200, image: "ASSETS/Top-Up/Membership-Packs/big-pack.webp" },
+    { id: "super-vip", category: "membership-pack", name: "SUPER VIP", price: 5160, image: "ASSETS/Top-Up/Membership-Packs/super-vip.webp" },
+    { id: "diamond-3000-pack", category: "membership-pack", name: "Diamond × 3000", price: 8600, image: "ASSETS/Top-Up/Membership-Packs/diamond-3000.webp" },
+    { id: "diamond-5000-pack", category: "membership-pack", name: "Diamond × 5000", price: 14300, image: "ASSETS/Top-Up/Membership-Packs/diamond-5000.webp" },
+    { id: "diamond-8000-pack", category: "membership-pack", name: "Diamond × 8000", price: 23000, image: "ASSETS/Top-Up/Membership-Packs/diamond-8000.webp" },
+    { id: "diamond-10000-pack", category: "membership-pack", name: "Diamond × 10000", price: 28800, image: "ASSETS/Top-Up/Membership-Packs/diamond-10000.webp" }
 ];
 
 /* =========================
@@ -226,7 +226,7 @@ function createPopup() {
 
             <div class="admin-options">
                 <button id="adminBtn1" class="adminBtn" type="button">
-                    <img class="admin-avatar" src="ASSETS/Admins/maduwa-ff.webp" alt="Shawdy admin profile" width="58" height="58">
+                    <img class="admin-avatar" src="ASSETS/Admins/maduwa-ff.webp" alt="Maduwa admin profile" width="58" height="58">
                     <span class="admin-name"><strong>Maduwa FF</strong><small>Store admin 01</small></span>
                     <span class="admin-phone">077 310 9964</span>
                 </button>
@@ -314,12 +314,12 @@ async function handleAdmin(number) {
 ========================= */
 function buyGuild(squads, price) {
     const data = {
-        1: ["3 Bots", "100K - 105K"],
-        2: ["6 Bots", "150K - 200K"],
-        3: ["9 Bots", "250K - 300K"],
-        4: ["12 Bots", "300K - 350K"],
-        5: ["15 Bots", "350K - 400K"],
-        6: ["18 Bots", "400K - 450K"]
+        1: ["4 Bots", "70K–200K"],
+        2: ["8 Bots", "140K–500K"],
+        3: ["12 Bots", "210K–700K"],
+        4: ["16 Bots", "280K–900K"],
+        5: ["20 Bots", "350K–1M"],
+        6: ["24 Bots", "420K–1.5M"]
     }[squads] || ["N/A", "N/A"];
 
     pendingOrder = {
@@ -497,7 +497,7 @@ function buildTopupOrder() {
     ].join("\n"));
 
     const message = [
-        `💎 SHAWDY STORE`,
+        `💎 MADUWA STORE`,
         `TOP-UP ORDER`,
         ``,
         `Hello, I would like to place the following order:`,
